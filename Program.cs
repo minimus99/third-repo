@@ -1,29 +1,18 @@
 ﻿using System;
-class P12_TestNumbers
-{
-    static void Main()
-    {
-        int number1 = int.Parse(Console.ReadLine());
-        int number2 = int.Parse(Console.ReadLine());
-        int boundary = int.Parse(Console.ReadLine());
 
-        int combinations = 0;
-        int sum = 0;
-        for (int i = number1; i >= 1; i--)
+namespace Problem_2._Add_Two_Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            for (int j = 1; j <= number2; j++)
-            {
-                sum += 3 * i * j;
-                combinations++;
-                if (sum >= boundary)
-                {
-                    Console.WriteLine($"{combinations} combinations");
-                    Console.WriteLine($"Sum: {sum} >= {boundary}");
-                    return;
-                }
-            }
+            var a = int.Parse(Console.ReadLine());
+            var b = int.Parse(Console.ReadLine());
+            var sum = a + b;
+          //  Console.WriteLine(sum);
+            Console.WriteLine($"{a} + {b} = {sum}");
+
+
         }
-        Console.WriteLine($"{combinations} combinations");
-        Console.WriteLine($"Sum: {sum}");
     }
 }
