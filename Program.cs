@@ -1,29 +1,23 @@
 ﻿using System;
-class P12_TestNumbers
-{
-    static void Main()
-    {
-        int number1 = int.Parse(Console.ReadLine());
-        int number2 = int.Parse(Console.ReadLine());
-        int boundary = int.Parse(Console.ReadLine());
 
-        int combinations = 0;
-        int sum = 0;
-        for (int i = number1; i >= 1; i--)
+namespace Problem_3._Employee_Data
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            for (int j = 1; j <= number2; j++)
-            {
-                sum += 3 * i * j;
-                combinations++;
-                if (sum >= boundary)
-                {
-                    Console.WriteLine($"{combinations} combinations");
-                    Console.WriteLine($"Sum: {sum} >= {boundary}");
-                    return;
-                }
-            }
+          //  Console.WriteLine("Hello World!");
+          string name = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());
+          int  employeeId= int.Parse(Console.ReadLine());
+            double salary = double.Parse(Console.ReadLine());
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Employee ID: {employeeId:D8}");//D служи за това клко нули искаме да видим пред числото,все едно имаме оселм квадрчатчета в кото  се запълва числото тоест ако е двет цифрено няма да има нули
+            Console.WriteLine($"Salary: {salary:F2}");
+
+
+
         }
-        Console.WriteLine($"{combinations} combinations");
-        Console.WriteLine($"Sum: {sum}");
     }
 }
